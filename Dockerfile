@@ -1,11 +1,8 @@
 FROM xaamin/php
 MAINTAINER Benjamín Martínez Mateos <bmxamin@gmail.com>
 
-# Set memory limit
-RUN sed -i 's/memory_limit = .*/memory_limit = -1/' /etc/php5/cli/php.ini
-
 # Add env variables
-ENV TRIES 5
+ENV TRIES 3
 
 # Add bootstrap file
 ADD start.bash /start.bash
